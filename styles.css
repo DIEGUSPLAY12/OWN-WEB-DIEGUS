@@ -23,6 +23,7 @@ body {
   box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4);
   border: 2px dashed #ff69b4;
   animation: bounceIn 1s ease;
+  padding-bottom: 100px;
 }
 
 @keyframes bounceIn {
