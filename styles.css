@@ -1,7 +1,7 @@
 /* Diseño Mobile First - estilo cumpleaños rosado/morado */
 body {
   margin: 0;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: linear-gradient(180deg, #ffb6c1, #dda0dd);
   display: flex;
   justify-content: center;
