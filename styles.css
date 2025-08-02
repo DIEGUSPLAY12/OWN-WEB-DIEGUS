@@ -1,8 +1,8 @@
-/* Diseño Mobile First - estilo cumpleaños rosado/morado */
+/* Estilo refinado - Postal de cumpleaños profesional */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: linear-gradient(180deg, #ffb6c1, #dda0dd);
+  background: linear-gradient(180deg, #f8c8dc, #d8a4e5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,18 +17,18 @@ body {
   width: 90%;
   max-width: 390px;
   background-color: white;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 25px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4);
-  border: 2px dashed #ff69b4;
-  animation: bounceIn 1s ease;
+  box-shadow: 0 8px 30px rgba(200, 120, 190, 0.2);
+  border: 1px solid #eba7d1;
+  animation: bounceIn 0.8s ease;
   padding-bottom: 100px;
 }
 
 @keyframes bounceIn {
   0% {
-    transform: scale(0.8);
+    transform: scale(0.95);
     opacity: 0;
   }
   100% {
@@ -38,65 +38,73 @@ body {
 }
 
 .avatar {
-  width: 220px;
-  height: 220px;
-  border-radius: 20%;
-  margin-bottom: 15px;
-  border: 4px solid #ff69b4;
-  box-shadow: 0 0 10px rgba(255, 182, 193, 0.8);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #e78ccf;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.5);
+  object-fit: cover;
+}
+.avatar2 {
+  width: 210px;
+  height: 210px;
+  border-radius: 25%;
+  margin-bottom: 20px;
+  border: 3px solid #e78ccf;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.5);
+  object-fit: cover;
 }
 
 h1 {
   font-size: 1.8rem;
-  color: #da70d6;
+  color: #b95ac9;
   margin: 15px 0 10px;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #555;
   margin-bottom: 20px;
-
 }
-
 
 .btn {
   display: block;
-  width: calc(100% - 40px); /* Añade margen interno de los lados */
-  max-width: 300px;
-  margin: 10px auto; /* Centrado horizontal */
-  padding: 14px;
-  background: linear-gradient(90deg, #ff69b4, #da70d6);
+  width: 100%;
+  max-width: 280px;
+  margin: 10px auto;
+  padding: 14px 18px;
+  background: linear-gradient(90deg, #ec79b7, #b95ac9);
   color: white;
   border: none;
-  border-radius: 16px;
-  font-weight: bold;
+  border-radius: 12px;
+  font-weight: 600;
   text-decoration: none;
-  transition: transform 0.2s;
-  box-shadow: 0 4px 10px rgba(218, 112, 214, 0.3);
-  box-sizing: border-box; /* importante para que padding no rompa el ancho */
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 6px 12px rgba(218, 112, 214, 0.25);
 }
 
-
 .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
+  box-shadow: 0 8px 16px rgba(186, 85, 211, 0.3);
 }
 
 .gallery {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 16px;
+  margin-top: 25px;
 }
 
 .gallery-img {
   width: 100%;
-  border-radius: 20px;
-  border: 3px solid #ff69b4;
-  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.5);
-  transition: transform 0.2s;
+  border-radius: 14px;
+  border: 2px solid #e3a7d1;
+  box-shadow: 0 6px 14px rgba(255, 182, 193, 0.4);
+  transition: transform 0.2s ease;
+  object-fit: cover;
 }
 
 .gallery-img:hover {
-  transform: scale(1.02);
+  transform: scale(1.015);
 }

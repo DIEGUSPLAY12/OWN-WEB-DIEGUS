@@ -1,0 +1,102 @@
+/* Diseño Mobile First - estilo cumpleaños rosado/morado */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #ffb6c1, #dda0dd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  padding-bottom: 40px;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.container {
+  width: 90%;
+  max-width: 390px;
+  background-color: white;
+  border-radius: 25px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4);
+  border: 2px dashed #ff69b4;
+  animation: bounceIn 1s ease;
+  padding-bottom: 100px;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 20%;
+  margin-bottom: 15px;
+  border: 4px solid #ff69b4;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.8);
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #da70d6;
+  margin: 15px 0 10px;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 20px;
+
+}
+
+
+.btn {
+  display: block;
+  width: calc(100% - 40px); /* Añade margen interno de los lados */
+  max-width: 300px;
+  margin: 10px auto; /* Centrado horizontal */
+  padding: 14px;
+  background: linear-gradient(90deg, #ff69b4, #da70d6);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 10px rgba(218, 112, 214, 0.3);
+  box-sizing: border-box; /* importante para que padding no rompa el ancho */
+}
+
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-img {
+  width: 100%;
+  border-radius: 20px;
+  border: 3px solid #ff69b4;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.5);
+  transition: transform 0.2s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+}
