@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Interactivo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <img id="questionImage" src="./img5.jpg" alt="Avatar" class="avatar2" />
+    <h1>🧠 Test Especial 🎉</h1>
+    <p id="question">¿Cuál es la capital de Francia?</p>
+
+    <div id="answers">
+      <button class="btn" onclick="checkAnswer(this, false)">Madrid</button>
+      <button class="btn" onclick="checkAnswer(this, false)">Roma</button>
+      <button class="btn" onclick="checkAnswer(this, true)">París</button>
+      <button class="btn" onclick="checkAnswer(this, false)">Berlín</button>
+    </div>
+
+    <p id="feedback" style="color: red; font-weight: bold; margin-top: 20px;"></p>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        text: "¿Como se llama la cumpleañera?",
+        answers: ["Julia", "Berta", "Paula", "María"],
+        correct: 2,
+        image: "img5.jpg"
+      },
+      {
+        text: "¿Cuántos años cumple Paula?",
+        answers: ["15", "18", "20", "21"],
+        correct: 1,
+        image: "img6.jpg"
+      },
+      {
+        text: "¿Que dia nació?",
+        answers: ["11 de agosto", "10 de agosto", "11 de setiembre", "10 de setiembre"],
+        correct: 0,
+        image: "img7.jpg"
+      }
+    ];
+
+    let current = 0;
+
+    function renderQuestion() {
+  const q = questions[current];
+  document.getElementById("question").textContent = q.text;
+  document.getElementById("questionImage").src = q.image;
+
+  const answersDiv = document.getElementById("answers");
+  answersDiv.innerHTML = "";
+
+  q.answers.forEach((ans, index) => {
+    const btn = document.createElement("button");
+    btn.textContent = ans;
+    btn.className = "btn";
+    btn.onclick = () => checkAnswer(btn, index === q.correct);
+    answersDiv.appendChild(btn);
+  });
+
+  document.getElementById("feedback").textContent = "";
+}
+
+
+    function checkAnswer(button, isCorrect) {
+      const feedback = document.getElementById("feedback");
+      if (isCorrect) {
+        feedback.style.color = "green";
+        feedback.textContent = "¡Correcto! 🎉";
+
+        setTimeout(() => {
+          current++;
+          if (current < questions.length) {
+            renderQuestion();
+          } else {
+            document.querySelector(".container").innerHTML = `
+              <img src="images.png" alt="Avatar" class="avatar2" />
+              <h1>¡Test Completado! 🎊</h1>
+              <p>¡Muy bien hecho! <br> Has contestado todo correctamente.</p>
+              <a href="index.html" class="btn">Volver al inicio</a>
+            `;
+          }
+        }, 1000);
+      } else {
+        feedback.style.color = "red";
+        feedback.textContent = "❌ Respuesta incorrecta. Intenta de nuevo.";
+      }
+    }
+
+    // Primera carga
+    renderQuestion();
+  </script>
+</body>
+</html>
