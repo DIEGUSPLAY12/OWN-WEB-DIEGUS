@@ -1,0 +1,51 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(to bottom right, #f8c8dc, #d8a4e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+#puzzle-container {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.piece {
+  width: 100%;
+  height: 100%;
+  background-image: url("puzzle.jpg");
+  background-size: 300px 300px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.piece:active {
+  transform: scale(1.05);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, #ec79b7, #b95ac9);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(186, 85, 211, 0.3);
+}
